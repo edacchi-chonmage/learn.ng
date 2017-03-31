@@ -4,14 +4,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { BrowserModule } from '@angular/platform-browser';
 
-// App Component
 import { AppComponent } from './components/app/app.component';
-
-// Components
-import { NumberButtonComponent } from './components/number.button/number.button.component';
-import { EvalButtonComponent } from './components/eval.button/eval.button.component';
-import { TextComponent } from './components/text/text.component';
-
+import { Components } from './imports/components';
 // For states
 import { rootReducer } from './states/root.reducer';
 
@@ -23,9 +17,7 @@ import { rootReducer } from './states/root.reducer';
   ],
   declarations: [
     AppComponent,
-    NumberButtonComponent,
-    EvalButtonComponent,
-    TextComponent
+    Components
   ],
   bootstrap: [
     AppComponent

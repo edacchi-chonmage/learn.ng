@@ -5,12 +5,12 @@ var autoprefixer = require('autoprefixer');
 var smartImport = require('postcss-smart-import');
 
 var PATH = {
-  VENDOR: __dirname + '/../src/vendor.ts',
-  MAIN: __dirname + '/../src/main.ts'
+  VENDOR: __dirname + '/src/vendor.ts',
+  MAIN: __dirname + '/src/main.ts'
 }
 
 var DIR = {
-  OUTPUT: __dirname + '/../dist/'
+  OUTPUT: __dirname + '/dist/'
 }
 
 var plugins = [
@@ -25,15 +25,6 @@ var plugins = [
           ]
         })
       ],
-      tslint: {
-        configFile: __dirname + '/tslint.json'
-      },
-      htmlhint: {
-        configFile: __dirname + '/.htmlhintrc'
-      },
-      sasslint: {
-        configFile: __dirname + '/.sass-lint.yml'
-      },
       'html-minify-loader': {
         quotes: true,
         comments: false,
@@ -68,28 +59,13 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, '../dist'),
+    contentBase: path.join(__dirname, 'dist'),
     port: 9000,
     open: true
   },
   module: {
     exprContextCritical: false,
     rules: [{
-        enforce: 'pre',
-        test: /\.ts$/,
-        loader: 'tslint-loader',
-        exclude: /vendor.ts|node_modules/
-      }, {
-        enforce: 'pre',
-        test: /\.html$/,
-        loader: 'htmlhint-loader',
-        exclude: /node_modules/
-      }, {
-        enforce: 'pre',
-        test: /\.scss$/,
-        loader: 'sasslint-loader',
-        exclude: /node_modules/
-      }, {
       test: /\.ts$/,
       use: [
         'awesome-typescript-loader',
