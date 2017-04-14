@@ -14,12 +14,12 @@ export class CalcSetCountAction implements Action {
 
 export class CalcSetTextAction implements Action {
   public type: string = calcActionTypes.SET_TEXT;
-  constructor (public payload: string) {}
+  constructor (public payload: number) {}
 }
 
 export class CalcChangeModeAction implements Action {
   public type: string = calcActionTypes.CHANGE_MODE;
-  constructor (public payload: TMode) {}
+  constructor (public payload: string) {}
 }
 
 export type TCalcActions =

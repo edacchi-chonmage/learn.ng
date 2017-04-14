@@ -20,7 +20,15 @@ export const calcReducer = (state = initialState, action: TCalcActions): ICalc =
     }
 
     case calcActionTypes.SET_TEXT: {
-      const text = action.payload;
+      let text: string = state.text;
+
+      if (state.isFirstPush) {
+        text = String(action.payload);
+      } else {
+        text += String(action.payload);
+      }
+
+      console.log('text:', text);
 
       return Object.assign({}, state, {
         text,
@@ -29,7 +37,37 @@ export const calcReducer = (state = initialState, action: TCalcActions): ICalc =
     }
 
     case calcActionTypes.CHANGE_MODE: {
-      const mode = action.payload;
+      let mode: string;
+
+      switch (action.payload) {
+        case '+':
+        default: {
+          mode = 'PLS';
+          break;
+        }
+
+        case '-': {
+          mode = 'MNS';
+          break;
+        }
+
+        case '*': {
+          mode = 'TIM';
+          break;
+        }
+
+        case '/': {
+          mode = 'DIV';
+          break;
+        }
+
+        case '=': {
+          mode = 'FIN';
+          break;
+        }
+      }
+
+      console.log('mode:', mode);
 
       return Object.assign({}, state, {
         mode,
