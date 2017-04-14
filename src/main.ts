@@ -23,6 +23,6 @@ import { rootReducer } from './states/root.reducer';
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);

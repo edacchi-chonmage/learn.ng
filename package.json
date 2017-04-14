@@ -39,8 +39,6 @@
     "html-webpack-plugin": "2.26.0",
     "htmlhint-loader": "1.1.1",
     "iconfont-webpack-plugin": "github:thrbrd/iconfont-webpack-plugin",
-    "jasmine": "2.5.3",
-    "mocha": "3.2.0",
     "node-sass": "4.3.0",
     "postcss-loader": "1.2.2",
     "postcss-smart-import": "0.6.7",

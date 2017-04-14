@@ -1,3 +1,5 @@
+import 'core-js/es6';
+import 'core-js/es7/reflect';
 import '@angular/common';
 import '@angular/core';
 import '@angular/forms';
@@ -8,8 +10,6 @@ import '@ngrx/core';
 import '@ngrx/store';
 import '@ngrx/store-devtools';
 import 'angular2-ie9-shims/shims_for_IE@2.1.2.js';
-import 'core-js/es6';
-import 'core-js/es7/reflect';
 import 'reselect';
 import 'rxjs';
 import 'zone.js/dist/zone';
