@@ -10,7 +10,7 @@
   "author": "thrbrd",
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "2.4.1"
+    "@angular/common": "2.4.1",
     "@angular/compiler": "2.4.1",
     "@angular/core": "2.4.1",
     "@angular/forms": "2.4.1",
